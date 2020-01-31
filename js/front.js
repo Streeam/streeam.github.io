@@ -330,7 +330,7 @@ function submit_by_id() {
   var message = document.getElementById("message").value;
   // document.getElementById("contact-form").submit(); //form submission
   // alert(" Name ");
-  var url = "http://localhost:8080/api/contact";
+  var url = "https://qms-manager.herokuapp.com/contact";
   jQuery.ajax({
     type: "POST",
     url: url,
