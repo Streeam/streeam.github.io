@@ -330,13 +330,14 @@ function submit_by_id() {
   var message = document.getElementById("message").value;
   // document.getElementById("contact-form").submit(); //form submission
   // alert(" Name ");
-  var url = "https://qms-manager.herokuapp.com/api/contact";
+  jQuery.support.cors = true; 
+  var url = "https://cors-anywhere.herokuapp.com/https://qms-manager.herokuapp.com/api/contact";
   jQuery.ajax({
     type: "POST",
     url: url,
     crossDomain: true,
     dataType: "JSON",
-    contentType: "application/json",
+    contentType: "application/x-www-form-urlencoded",
     headers: {
       Accept: "application/json",
       'Content-Type': 'application/x-www-form-urlencoded'
