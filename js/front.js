@@ -334,12 +334,12 @@ function submit_by_id() {
   jQuery.ajax({
     type: "POST",
     url: url,
-    crossOrigin: true,
+    crossDomain: true,
     dataType: "JSON",
     contentType: "application/json",
     headers: {
       Accept: "application/json",
-      "Content-Type": "application/json"
+      'Content-Type': 'application/x-www-form-urlencoded'
     },
     data: JSON.stringify({
       firstName: firstName,
